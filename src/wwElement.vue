@@ -19,10 +19,8 @@ export default defineComponent({
     },
   },
   methods: {
-    sendMessage(...args) {
-      console.log('send message now')
-      this.$emit('element-event', { name: 'sendMessage' })
-      console.log("I sent the message")
+    sendMessage(event) {
+      this.$emit('trigger-event', { name: 'update:send', event: event.detail[0] })
     }
   }
 })

@@ -1,9 +1,14 @@
 export default {
   editor: {
-    label: "Vue Advanced Chat",
+    label: "Vue Advanced Chat2",
   },
   triggerEvents: [
-    { name: "sendMessage", label: "When a user sends a Message" },
+    {
+      name: "update:send",
+      label: "When a user sends a message from the box",
+      event: { content: "", files: [], replyMessage: {}, roomId: "" },
+      default: true,
+    },
   ],
   properties: {
     currentUserId: {
